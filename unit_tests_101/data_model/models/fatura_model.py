@@ -1,0 +1,2 @@
+class Fatura(object):
+    pass
