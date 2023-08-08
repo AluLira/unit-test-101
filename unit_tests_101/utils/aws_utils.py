@@ -1,17 +1,12 @@
-import gzip
-import os
-import time
-import uuid
-import boto3
-import json
-
-from botocore.exceptions import ClientError
-
-
 class AWSUtils:
     @staticmethod
     def get_parameter_ssm(parameter_name, encrypted=False):
         """Função para pegar parametro especifico no ssm"""
+        pass
+
+    @staticmethod
+    def salvar_dados_rds(dados_fatura: object):
+        """ "Função para salvar informações do objeto no DB"""
         pass
 
     @staticmethod
