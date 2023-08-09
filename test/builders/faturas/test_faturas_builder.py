@@ -21,7 +21,7 @@ def builder(builder_configuration):
 
     builder = builder_configuration(
         current_location=parent_dir,
-        test_file="pdf_fatura.html",
+        test_file="pdf_fatura.pdf",
         builder=base_builder,
         s3_record=s3_record,
     )
@@ -35,6 +35,8 @@ def test_valores_fatura(builder: FaturaBuilder, mocker):
 
     assert isinstance(retorno_fatura, Fatura)
 
+    # Valores das propriedades do objeto vão ser asserted baseado no valor fixo previamente
+    # conhecido encontrado no arquivo de teste (pdf_fatura.pdf nesse caso)
     assert builder.dados_fatura.Faturado == 100
     assert builder.dados_fatura.Ajuste == 60
     assert builder.dados_fatura.Tarifa == 1.0586
