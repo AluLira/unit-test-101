@@ -6,7 +6,7 @@ from unit_tests_101.dto.s3_record_dto import S3RecordDTO
 
 
 def _create_local_response(test_dir, test_file):
-    file_name = f"{test_dir}/html/{test_file}"
+    file_name = f"{test_dir}/pdf/{test_file}"
     with open(file_name, "r", encoding="utf-8") as file:
         data = file.read()
 
